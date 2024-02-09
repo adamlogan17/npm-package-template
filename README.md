@@ -1,30 +1,35 @@
-# React + TypeScript + Vite
+# npm-package-template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a template repository for creating a npm React component package.
 
-Currently, two official plugins are available:
+The initial setup followed the instructions on the library [here](https://dev.to/receter/how-to-create-a-react-component-library-using-vites-library-mode-4lma).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Using the Template
 
-## Expanding the ESLint configuration
+Within `./package.json` ensure the following is changed to the equivalent for your project.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
+```json
+{
+    "name": "<name-of-library>",
+    "author": {
+        "name": "<your-name>"
+    },
+    "homepage": "<your-demo-page-if-applicable>",
+    "repository": {
+        "type": "git",
+        "url": "<your-repo-url>"
+    },
+    "keywords": [
+        "react",
+        "typescript",
+        "<relevant-keyword>"
+    ],
+    "license": "<your-license>"
 }
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Delete the existing components, within `./lib/components` and add the components to be part of the package here.
+
+All types that are required to be exported within the package, should be contained within `./lib/types.d.ts`
+
+Create the demo site within the `./src` folder.
