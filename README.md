@@ -1,4 +1,4 @@
-# npm-package-template
+# npm-package-template-ts
 
 This is a template repository for creating a npm React component package.
 
