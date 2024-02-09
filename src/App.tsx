@@ -2,8 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { Button } from '../lib/main'
-import { CustomTitle } from '../lib/components/Title/Title'
+import { Button, Title } from '../lib/main'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -33,7 +32,7 @@ function App() {
 
       <Button>Custom Button!</Button>
 
-      <CustomTitle text="Custom Title!" age={21}/>
+      <Title text="Custom Title!" age={21}/>
     </>
   )
 }
