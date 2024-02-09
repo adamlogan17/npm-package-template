@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { Button } from '../lib/main'
+import { CustomTitle } from '../lib/components/Title/Title'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -31,6 +32,8 @@ function App() {
       </p>
 
       <Button>Custom Button!</Button>
+
+      <CustomTitle text="Custom Title!" age={21}/>
     </>
   )
 }
