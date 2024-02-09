@@ -36,10 +36,6 @@
     "prettier": "prettier --write \"./**/*.{js,ts,jsx,tsx,cjs}\"",
     "prepublishOnly": "npm run build:library"
   },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
   "peerDependencies": {
     "react": ">=18",
     "react-dom": ">=18"
