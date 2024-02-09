@@ -4,6 +4,8 @@ This is a template repository for creating a npm React component package.
 
 The initial setup followed the instructions on the library [here](https://dev.to/receter/how-to-create-a-react-component-library-using-vites-library-mode-4lma).
 
+Prettier and ESLint configurations were inspired from [this](https://betterprogramming.pub/how-to-create-and-publish-react-typescript-npm-package-with-demo-and-automated-build-80c40ec28aca) article.
+
 ## Using the Template
 
 Within `./package.json` ensure the following is changed to the equivalent for your project.

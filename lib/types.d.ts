@@ -1,4 +1,4 @@
 type TestingTypes = {
-  text: string,
-  age: number
+	text: string;
+	age: number;
 };
