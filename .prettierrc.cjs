@@ -9,7 +9,7 @@ module.exports = {
 	singleQuote: true,
 	trailingComma: 'all',
 	tabWidth: 2,
-	semi: false,
+	semi: true,
 	printWidth: 120,
 	jsxSingleQuote: true,
 	endOfLine: 'auto',
@@ -26,4 +26,4 @@ module.exports = {
 			},
 		},
 	],
-}
+};

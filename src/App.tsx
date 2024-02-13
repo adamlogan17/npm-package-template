@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 import { Button, Title } from '../lib/main';
+import LiveReactEditor from '../lib/components/LiveReactEditor/LiveReactEditor';
 
 function App() {
 	const [count, setCount] = useState(0);
@@ -29,6 +30,8 @@ function App() {
 			<Button>Custom Button!</Button>
 
 			<Title text='Custom Title!' age={21} />
+
+			<LiveReactEditor code={'<Button>Custom Button!</Button>'} scope={{ Button }} />
 		</>
 	);
 }
