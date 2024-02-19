@@ -56,7 +56,6 @@ The `"name": "<name-of-library>"` within `./typedoc.config.json` also needs to b
   - Builds the demo site.
 `npm run build:library`
   - Builds the package that is published to NPM.
-
 - `npm run prettier`
   - Changes the format of your code to fit with the style guides set in `./.prettierrc.cjs`.
 - `npm run publish:<patch|minor|major>`
@@ -66,9 +65,10 @@ The `"name": "<name-of-library>"` within `./typedoc.config.json` also needs to b
     - `major` changes X
   - See the [NPM docs](https://docs.npmjs.com/about-semantic-versioning) for advice on which to use.
 - `npm run docs`
-  - Generates documentation from the [TypeDoc](https://typedoc.org/guides/doccomments/) comments, within the code.
-  - A documentation site can be viewed by opening `./docs/site/index.html`
-  - Markdown documentation can be viewed at `./docs/markdown`
+  - Generates documentation from the [TypeDoc](https://typedoc.org/guides/doccomments/) comments, within the code in the `./lib` directory.
+  - A documentation site can be viewed by opening `./docs/site/index.html`.
+  - Markdown documentation can be viewed at `./docs/markdown`.
+  - Configuration for this tool can be changed within the `./typedoc.config.json` file.
 
 ## TDOD
 

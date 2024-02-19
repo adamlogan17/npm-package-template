@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 import { Button, Title } from '../lib/main';
-import LiveReactEditor from '../lib/components/LiveReactEditor/LiveReactEditor';
+import LiveReactEditor from './components/LiveReactEditor/LiveReactEditor';
 
 function App() {
 	const [count, setCount] = useState(0);
