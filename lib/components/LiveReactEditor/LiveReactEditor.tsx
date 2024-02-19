@@ -1,16 +1,35 @@
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
-
-type LiveReactEditorProps = {
-	code: string;
-	scope: Record<string, any>;
-};
+import useMediaQuery from '../../hooks/useMediaQuery';
+import { CSSProperties } from 'react';
 
 export default function LiveReactEditor(props: LiveReactEditorProps) {
+  const mediaTrigger:boolean = useMediaQuery(`(min-width: ${props.mediaBreakpoint || 1200}px)`);
+
+  const borderStyle:string = `${props.borderSize || 5}px solid ${props.borderColor || '#f0f0f0'}`;
+
+  const previewStyle:CSSProperties = {
+    flex: 1,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
+  };
+
 	return (
 		<LiveProvider code={props.code} scope={props.scope}>
-      <LiveEditor />
-      <LiveError />
-      <LivePreview />
+      <div style={{
+        border: borderStyle,
+        display: 'flex',
+        flexDirection: mediaTrigger ? 'row' : 'column',
+        borderRadius: '10px'
+      }}>
+        <LiveEditor style={{
+          flex:1,
+          borderRight: mediaTrigger ? borderStyle : 'none',
+          borderBottom: mediaTrigger ? 'none' : borderStyle
+        }}/>
+        <LiveError style={previewStyle} />
+        <LivePreview style={previewStyle} />
+      </div>
 		</LiveProvider>
 	);
 }
