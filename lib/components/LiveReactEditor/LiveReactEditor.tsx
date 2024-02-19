@@ -2,6 +2,14 @@ import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 import useMediaQuery from '../../hooks/useMediaQuery';
 import { CSSProperties } from 'react';
 
+/**
+ * @function LiveReactEditor
+ * 
+ * @component 
+ * @author @adamlogan17
+ * @param {LiveReactEditorProps} props Properties for the LiveReactEditor component.
+ * @returns {JSX.Element} A JSX Element representing the LiveReactEditor component.
+ */
 export default function LiveReactEditor(props: LiveReactEditorProps) {
   const mediaTrigger:boolean = useMediaQuery(`(min-width: ${props.mediaBreakpoint || 1200}px)`);
 

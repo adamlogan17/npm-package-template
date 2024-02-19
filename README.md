@@ -41,6 +41,8 @@ All types that are required to be exported within the package, should be contain
 
 Create the demo site within the `./src` folder.
 
+The `"name": "<name-of-library>"` within `./typedoc.config.json` also needs to be changed.
+
 ## TDOD
 
 - Add jest tests to the site
